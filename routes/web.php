@@ -15,5 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Auth::routes();
+
+
 Route::match(['get', 'post'], '/botman', 'BotManController@handle');
 Route::get('/botman/tinker', 'BotManController@tinker');
